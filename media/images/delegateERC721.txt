@@ -1,0 +1,11 @@
+title Delegation System: ERC721
+
+Delegator->DelegateRegistry: delegateERC721(delegatee, nft, tokenId, privileges)
+Delegatee->DelegateRegistryIntegrator: doSomething(tokenId)
+DelegateRegistryIntegrator->ERC721: ownerOf(tokenId)
+ERC721->DelegateRegistryIntegrator: delegator
+DelegateRegistryIntegrator->DelegateRegistry: getDelegatedERC721(delegator, delegatee, nft, tokenId, privileges)
+DelegateRegistry->DelegateRegistryIntegrator: delegatedAmount (0 or 1)
+DelegateRegistryIntegrator->DelegateRegistryIntegrator: act on delegatedAmount
+note over Delegator,ERC721:
+Delegator->DelegateRegistry: revokeERC721(delegatee,nft,tokenId,privileges)

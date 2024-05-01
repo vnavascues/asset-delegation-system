@@ -1,10 +1,10 @@
 {
-  "name": "@prb/foundry-template",
-  "description": "Foundry-based template for developing Solidity smart contracts",
+  "name": "asset-delegation-system",
+  "description": "Smart Contract Engineer technical test",
   "version": "1.0.0",
   "author": {
-    "name": "Paul Razvan Berg",
-    "url": "https://github.com/PaulRBerg"
+    "name": "Victor Navascues",
+    "url": "https://github.com/vnavascues"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.1"

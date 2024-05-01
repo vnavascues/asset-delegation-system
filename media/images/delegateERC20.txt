@@ -1,0 +1,11 @@
+title Delegation System: ERC20
+
+Delegator->DelegateRegistry: delegateERC20(delegatee, token, privileges, amount)
+Delegatee->DelegateRegistryIntegrator: doSomething(delegator,amount)
+DelegateRegistryIntegrator->ERC20: balanceOf(delegator)
+ERC20->DelegateRegistryIntegrator: amount
+DelegateRegistryIntegrator->DelegateRegistry: getDelegatedERC20(delegator, delegatee, token, privileges)
+DelegateRegistry->DelegateRegistryIntegrator: delegatedAmount (0..N)
+DelegateRegistryIntegrator->DelegateRegistryIntegrator: act on delegatedAmount
+note over Delegator,ERC20:
+Delegator->DelegateRegistry: revokeERC20(delegatee,token,privileges)

@@ -1,0 +1,99 @@
+DelegateRegistry::delegateERC20
+├── when delegation exists
+│   └── it should revert
+└── when delegation does not exist
+    ├── it should map delegationKey
+    ├── it should map delegator
+    ├── it should setmap delegatee
+    ├── it should emit ERC20Delegated event
+    └── it should return delegationKey
+
+
+DelegateRegistry::delegateERC721
+├── when delegation exists
+│   └── it should revert
+└── when delegation does not exist
+    ├── it should map delegationKey
+    ├── it should map delegator
+    ├── it should setmap delegatee
+    ├── it should emit ERC721Delegated event
+    └── it should return delegationKey
+
+
+DelegateRegistry::getDelegatedERC20
+├── when delegation does not exist
+│   └── it should return zero delegated amount
+└── when delegation exists
+    └── it should return one delegated amount
+
+
+DelegateRegistry::getDelegatedERC721
+├── when delegation does not exist
+│   └── it should return zero delegated amount
+└── when delegation exists
+    └── it should return one delegated amount
+
+
+DelegateRegistry::getDelegateeDelegationKeys
+├── when delegations do not exist
+│   └── it should return empty array
+└── when delegations exist
+    └── it should return array of delegationKey
+
+
+DelegateRegistry::getDelegateeDelegationKeys
+├── when delegations do not exist
+│   └── it should return empty array
+└── when delegations exist
+    └── it should return array of delegationKey
+
+
+DelegateRegistry::getDelegation
+├── when delegation does not exist
+│   └── it should return default delegation
+└── when delegation exists
+    └── it should return delegation
+
+
+DelegateRegistry::getDelegationKeyERC20
+└── it should return delegationKey
+
+
+DelegateRegistry::getDelegationKeyERC721
+└── it should return delegationKey
+
+
+DelegateRegistry::getDelegations
+├── when delegationKeys is empty
+│   └── it should return empty array
+└── when delegationKeys is not empty
+    └── it should return array of delegation
+
+
+DelegateRegistry::getDelegatorDelegationKeys
+├── when delegations do not exist
+│   └── it should return empty array
+└── when delegations exist
+    └── it should return array of delegationKey
+
+
+DelegateRegistry::revokeERC20
+├── when delegation does not exist
+│   └── it should revert
+└── when delegation exists
+    ├── it should unmap delegationKey
+    ├── it should unmap delegator
+    ├── it should unmap delegatee
+    ├── it should emit ERC721Revoked event
+    └── it should return true
+
+
+DelegateRegistry::revokeERC721
+├── when delegation does not exist
+│   └── it should revert
+└── when delegation exists
+    ├── it should unmap delegationKey
+    ├── it should unmap delegator
+    ├── it should unmap delegatee
+    ├── it should emit ERC721Revoked event
+    └── it should return true
